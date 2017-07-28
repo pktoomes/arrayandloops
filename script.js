@@ -1,196 +1,131 @@
 /*
-In this activity, your task is to complete the unfinished functions. Instructions accompany each function explaining what the function should do and what value it should return. You will implement logic using loops, conditional statements, arrays, and objects to return the values specified in the instructions.
+In this project, your task is to complete the unfinished functions. Instructions accompany each function explaining what the function should do and what value it should return. You will implement logic using loops, conditional statements, arrays, and objects to return the values specified in the instructions.
 
-The `test.js` file contains tests for all of the functions in this activity. Do not change any code in `test.js`. To see the output from `test.js` and to evaluate your work, open `index.html` in Chrome and view the console in the Developer Tools. You'll know that you are finding success when all of the `console.log` statements print 'true'.
-
-***************************
-To demonstrate what is required in this activity, task 0 is spelled out and completed.
-***************************
+The `test.js` file contains tests for all of the functions in this project. Do not change any code in `test.js`. To see the output from `test.js` and to evaluate your work, open `index.html` in Chrome and view the console in the Developer Tools. You'll know that you are finding success when all of the `console.log` statements print 'true'.
 */
+
+
+/********************
+Use the following array to complete tasks 1-3
+*********************/
+let numbers = [ 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6 ];
 
 
 /*
-0. Return the "name" property value of the "pet" object.
-
-Answer: This function should return the string "Clive"
+1. Return the 4th element in the "numbers" array
 */
-
-let pet = {
-    name : "Clive"
-};
-
-function getPetName(){
-    // Answer goes here:
-    return pet.name;
+function getFourthNum(){
+    // Your answer here:
+    return numbers[3];
 }
 
 /*
-1. Return the concatenated "firstname" and "lastname" values of the "human" object.
-
-HINT: Put a space `" "` between the two names
-
-Answer: This function should return the string "Betty Ford"
+2. Iterate over the "numbers" array. Push any numbers less than 10 onto "smallNums". Return "smallNums".
 */
-
-let human = {
-    firstname : "Betty",
-    lastname : "Ford"
-};
-
-function getHumanName(){
-    // Answer goes here:
-    return human.firstname+" "+human.lastname;
-}
-
-/*
-2. Return the 3rd element of the "terrain" array
-
-Answer: This function should return the string "hill"
-*/
-
-let terrain = [ "plain", "mountain", "hill", "beach", "valley" ];
-
-function getTerrain(){
-    // Answer goes here:
-    return terrain[ 2 ];
-}
-
-/*
-3. Return the 2nd element of the "hobbies" property of the "child" object
-
-Answer: This function should return the string "running"
-*/
-
-let child = {
-    name : "Sam",
-    hobbies : [ "swimming", "running", "swinging" ]
-};
-
-function getChildHobby(){
-    // Answer goes here:
-    return child.hobbies[ 1 ];
-}
-
-/*
-4. Iterate over the "nums" array and multiply each number by 3. Return the altered array.
-
-HINT: You will need to "loop" over the array
-
-Answer: This function should return [702, 18, 7128, 2658, 702, 1371, 234]
-*/
-
-let nums = [ 234, 6, 2376, 886, 234, 457, 78 ];
-
-function getDoubledArray(){
-    // Answer goes here:
-    for( let i = 0; i < 7; i++){
-      nums[ i ] *= 3;
-    }
-  return nums;
-}
-
-/*
-5. Iterate over the "characters" array and concatenate each element onto the "gibberish" variable. After building the string, return "gibberish"
-
-HINT: You will need to "loop" over the array
-
-Answer: This function should return "k?4Fd9$al;Y1!"
-*/
-
-let characters = [ "k", "?", "4", "Fd", "9", "$", "a", "l", ";", "Y", "1", "!"];
-
-function getGibberish(){
-    let gibberish = "";
-    // Answer goes here:
-    for( let i = 0; i < 12; i++){
-    gibberish = gibberish + characters[i];
-  }
-  return gibberish;
-}
-
-/*
-6. Add a new "health" property with a value of "9 hearts" to the "hero" object and return "hero"
-
-Answer: This function should return { name: "Link", health: "9 hearts", weapon : "Sword" }
-*/
-
-let hero = {
-    name: "Link",
-    weapon : "Sword"
-};
-
-function addHealthToHero(){
-    // Answer goes here:
-    for(i = 0, i < 1; i++){
-      if i =
-      hero.push(hero.[health: "9 hearts"]);
-    }
-    return hero
-}
-
-/*
-7. Iterate over the "bigNums" array. If any number is less than 10, replace it with "x". Return "bigNums"
-
-HINT: You will need to "loop" over the array and check "if" the numbers are "less than" 10
-
-Answer: This function should return ["x", 12, "x", 56, 19, "x", "x", "x", 14, 10, "x"]
-*/
-
-let bigNums = [ 3, 12, 7, 56, 19, 9, 1, 5, 14, 10, 2 ];
-
-function nixLittleNums(){
-    // Answer goes here:
+function smallNums(){
+    let smallNums = [];
+    // Your answer here:
     for(i = 0; i < 11; i++){
-      if (bigNums[i] < 10){
-        bigNums[i] = "x";
+      if(numbers[i] < 10){
+        smallNums.push(numbers[i]);
       }
     }
-    return bigNums;
+    return smallNums
 }
 
 /*
-8. This example includes the "randomWord" function. "randomWord" will select a random element from the "words" array and return that element. Use "randomWord" to build a new array "lotsOfWords" with 100 elements from "words".  Return "lotsOfWords".
-
-HINT: You'll need to call the same function 100 times. "words" is a small array, so "lotsOfWords" will have many duplicated words.
-
-Answer: Since "randomWord" returns a word at random, this document cannot provide an exact result. However, `lotsOfWords.length` should be 100
+3. Add 12, 99, and 101 (in that order) to the end of the "numbers" array. Return the "numbers" array.
 */
-
-function randomWord(){
-    let words = [ "puzzling", "thirsty", "sound", "shade", "moon" ];
-    return words[ Math.floor( Math.random() * 5 ) ];
+function addNums(){
+    // Your answer here:
+    let numsAdd = [12, 99, 101];
+    for(i = 0; i < 3; i++){
+      numbers.push(numsAdd[i]);
+    }
+    return numbers;
 }
 
-function getBigWordList(){
-    let lotsOfWords = [];
-    // Answer goes here:
-    for(i = 0; i < 100; i++){
-      lotsOfWords.push(randomWord(i));
-    }
-    return lotsOfWords;
+
+
+/********************
+Use the following object to complete tasks 4-6
+*********************/
+
+let film = {
+    title : "Seven Samurai",
+    director : "Akira Kurosawa",
+    released : 1956,
+    runtime : 207,
+    budget : 2000000,
+    actors : [ "Toshiro Mifune", "Takashi Shimura", "Keiko Tsushima" ],
+};
+
+
+/*
+4. Add a property "boxoffice" with a value of 269061 to the "film" object. Return "film".
+*/
+function addBoxOffice(){
+    // Your answer here:
+    film.boxoffice = 269061;
+    return film;
 }
 
 /*
-9. Within the function, create a new variable "finalChoice" and initialize it with an empty array. Then, iterate over the "option1" and "option2" arrays using a single loop. Within the loop, compare the values of each array at each index. Push the larger of the two numbers onto the "finalChoice" array. Return "finalChoice".
+5. Add the name "Yukiko Shimazaki" to the "actors" array. Return "film";
+*/
+function addActor(){
+    // Your answer here:
+}
 
-HINT: You'll need to "loop" over these arrays. "If" the number in option1 is larger, push it onto finalChoice, "else" push the number in option2 onto finalChoice.
+/*
+6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
+*/
+function getLosses(){
+    // Your answer here:
+}
 
-Answer: This should return [76, 586, 12, 934, 76, 345, 6789, 123, 675, 43654]
+
+
+
+
+
+/*
+7. Iterate over "letterVals" and "numberVals". Concatenate the values from the two arrays and store the new values in the "vals" array. Return "vals".
+
+Your function should return [ "v5", "x67", "r34", "f456", "p78" ];
 */
 
-let option1 = [ 45, 586, 12, 365, 76, 23, 86, 19, 8, 43654 ];
-let option2 = [ 76, 364, 4, 934, 6, 345, 6789, 123, 675, 12 ];
+let numberVals = [ 5, 67, 34, 456, 78 ];
+let letterVals = [ "v", "x", "r", "f", "p" ];
 
-function getFinalChoice(){
-    // Answer goes here:
-    let finalChoice= []
-    for (i = 0; i < 10; i++){
-      if(option1[i] > option2[i]){
-        finalChoice.push(option1[i]);
-      }
-      else{
-        finalChoice.push(option2[i]);
-      }
+function interleave(){
+    let vals = [];
+    // Your answer here:
+    for(i = 0; i < 5; i++){
+      vals.push(letterVals[i] + numberVals[i]);
     }
-    return finalChoice;
+    return vals
+}
+
+
+
+
+
+
+/*
+8. Iterate over the "first" and "second" arrays. Compare the values for both arrays. If the arrays values are the same, then store that value in the "same" array. Return "same".
+*/
+
+let first = [ "blink", "stand", "glasses", "chair", "numinous", "adjacent", "bracelet", "hand" ];
+let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close", "toe" ];
+
+function union(){
+    let same = [];
+    // Your answer here:
+    for(i = 0; i < 8; i++){
+      if(first[i] === second[i]){
+       same.push(first[i]);
+     }
+    }
+    return same
 }
